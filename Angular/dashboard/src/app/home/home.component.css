@@ -1,0 +1,33 @@
+.card {
+  background-color: #5fa652;
+  color: black;
+  margin-bottom: 10px;
+}
+body {
+  background-color: white;
+}
+.text {
+  color: white;
+  text-align: center;
+  font-size: 2.5vw;
+}
+.date {
+  color: white;
+}
+.img-card {
+  height: 75vh;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header {
+  font-size: 2.5vw;
+}
+.header-pic {
+  width: 5vw;
+  height: 5vw;
+}
+.pictureAnalyse {
+  height: 100%;
+}
