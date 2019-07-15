@@ -26,6 +26,10 @@ namespace EventOrganizer.Repository
             return _context.UserPictures.FirstOrDefault(userPicture => userPicture.IdFromPlat == id);
         }
 
+        public UserPicture GetById(int id)
+        {
+            return _context.UserPictures.FirstOrDefault(e => e.Id == id);
+        }
         public async Task<bool> Insert(UserPicture entity)
         {
             var verify = Get(entity.IdFromPlat);

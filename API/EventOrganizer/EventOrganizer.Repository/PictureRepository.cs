@@ -23,7 +23,10 @@ namespace EventOrganizer.Repository
         {
             return _context.Pictures.FirstOrDefault(picture => picture.IdFromPlat == id);
         }
-
+        public Picture GetById(int id)
+        {
+            return _context.Pictures.FirstOrDefault(e => e.Id == id);
+        }
         public async Task<bool> Insert(Picture entity)
         {
             var verify = Get(entity.IdFromPlat);

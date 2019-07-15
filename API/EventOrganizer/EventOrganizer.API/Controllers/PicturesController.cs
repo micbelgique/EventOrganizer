@@ -72,11 +72,11 @@ namespace EventOrganizer.API.Controllers
             return result;
         }
         [HttpPut("{id}")]
-        public async Task<bool> BanPicture(long id)
+        public async Task<bool> BanPicture(int id)
         {
             using (IRepository<Picture> picturesRepository = new PictureRepository(_context))
             {
-                var pic = picturesRepository.Get(id);
+                var pic = picturesRepository.GetById(id);
                 if (pic == null)
                     return false;
                 pic.Removed = true;

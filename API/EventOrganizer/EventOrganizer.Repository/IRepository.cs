@@ -8,6 +8,7 @@ namespace EventOrganizer.Repository
     {
         IEnumerable<T> GetAll();
         T Get(long id);
+        T GetById(int id);
         Task<bool> Insert(T entity);
         Task<bool> Delete(long id);
         Task<bool> Update(T entity);
