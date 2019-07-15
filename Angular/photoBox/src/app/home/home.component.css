@@ -1,0 +1,25 @@
+.app {
+  position: relative;
+}
+.vid {
+  position: relative;
+  z-index: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+.num {
+  position:absolute;
+  top:20%;
+  left:45%;
+  z-index:1;
+  font-size: 40vh;
+  color: red;
+}
+.btnPic {
+  position: absolute;
+  top:85%;
+  left:47%;
+  z-index: 2;
+}
