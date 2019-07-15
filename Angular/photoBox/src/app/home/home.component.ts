@@ -6,12 +6,12 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  @ViewChild('video')
+  @ViewChild('video', { static: true })
   public video;
 
-  @ViewChild('canvas')
+  @ViewChild('canvas', { static: true })
   public canvas;
-  @ViewChild('imgPic')
+  @ViewChild('imgPic', { static: true })
   public imgPic;
   public num: number;
   public pictureTaked = false;
