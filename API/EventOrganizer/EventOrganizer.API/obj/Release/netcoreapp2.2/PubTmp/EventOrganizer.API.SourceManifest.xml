@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="C:\EventOrganizer\API\EventOrganizer\EventOrganizer.API\obj\Release\netcoreapp2.2\PubTmp\Out\" />
+  <IisApp path="C:\GitKraken\EventOrganizer\API\EventOrganizer\EventOrganizer.API\obj\Release\netcoreapp2.2\PubTmp\Out\" />
 </sitemanifest>

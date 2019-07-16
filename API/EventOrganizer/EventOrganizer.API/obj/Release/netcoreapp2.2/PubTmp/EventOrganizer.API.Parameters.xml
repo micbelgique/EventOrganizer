@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="IIS Web Application Name" description="" value="hitw2019api" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer\.API\\obj\\Release\\netcoreapp2\.2\\PubTmp\\Out\\$" />
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer\.API\\obj\\Release\\netcoreapp2\.2\\PubTmp\\Out\\$" />
   </parameter>
 </parameters>

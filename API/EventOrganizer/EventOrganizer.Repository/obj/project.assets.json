@@ -3490,11 +3490,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Repository\\EventOrganizer.Repository.csproj",
+      "projectUniqueName": "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Repository\\EventOrganizer.Repository.csproj",
       "projectName": "EventOrganizer.Repository",
-      "projectPath": "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Repository\\EventOrganizer.Repository.csproj",
+      "projectPath": "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Repository\\EventOrganizer.Repository.csproj",
       "packagesPath": "C:\\Users\\NathanPire\\.nuget\\packages\\",
-      "outputPath": "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Repository\\obj\\",
+      "outputPath": "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -3515,8 +3515,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj": {
-              "projectPath": "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj"
+            "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj": {
+              "projectPath": "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj"
             }
           }
         }

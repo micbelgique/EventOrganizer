@@ -10,3 +10,15 @@ C:\EventOrganizer\API\EventOrganizer\EventOrganizer.Repository\obj\Release\netco
 C:\EventOrganizer\API\EventOrganizer\EventOrganizer.Repository\obj\Release\netcoreapp2.2\EventOrganizer.Repository.csproj.CopyComplete
 C:\EventOrganizer\API\EventOrganizer\EventOrganizer.Repository\obj\Release\netcoreapp2.2\EventOrganizer.Repository.dll
 C:\EventOrganizer\API\EventOrganizer\EventOrganizer.Repository\obj\Release\netcoreapp2.2\EventOrganizer.Repository.pdb
+C:\GitKraken\EventOrganizer\API\EventOrganizer\EventOrganizer.Repository\bin\Release\netcoreapp2.2\EventOrganizer.Repository.deps.json
+C:\GitKraken\EventOrganizer\API\EventOrganizer\EventOrganizer.Repository\bin\Release\netcoreapp2.2\EventOrganizer.Repository.dll
+C:\GitKraken\EventOrganizer\API\EventOrganizer\EventOrganizer.Repository\bin\Release\netcoreapp2.2\EventOrganizer.Repository.pdb
+C:\GitKraken\EventOrganizer\API\EventOrganizer\EventOrganizer.Repository\bin\Release\netcoreapp2.2\EventOrganizer.Model.dll
+C:\GitKraken\EventOrganizer\API\EventOrganizer\EventOrganizer.Repository\bin\Release\netcoreapp2.2\EventOrganizer.Model.pdb
+C:\GitKraken\EventOrganizer\API\EventOrganizer\EventOrganizer.Repository\obj\Release\netcoreapp2.2\EventOrganizer.Repository.csprojAssemblyReference.cache
+C:\GitKraken\EventOrganizer\API\EventOrganizer\EventOrganizer.Repository\obj\Release\netcoreapp2.2\EventOrganizer.Repository.csproj.CoreCompileInputs.cache
+C:\GitKraken\EventOrganizer\API\EventOrganizer\EventOrganizer.Repository\obj\Release\netcoreapp2.2\EventOrganizer.Repository.AssemblyInfoInputs.cache
+C:\GitKraken\EventOrganizer\API\EventOrganizer\EventOrganizer.Repository\obj\Release\netcoreapp2.2\EventOrganizer.Repository.AssemblyInfo.cs
+C:\GitKraken\EventOrganizer\API\EventOrganizer\EventOrganizer.Repository\obj\Release\netcoreapp2.2\EventOrganizer.Repository.csproj.CopyComplete
+C:\GitKraken\EventOrganizer\API\EventOrganizer\EventOrganizer.Repository\obj\Release\netcoreapp2.2\EventOrganizer.Repository.dll
+C:\GitKraken\EventOrganizer\API\EventOrganizer\EventOrganizer.Repository\obj\Release\netcoreapp2.2\EventOrganizer.Repository.pdb

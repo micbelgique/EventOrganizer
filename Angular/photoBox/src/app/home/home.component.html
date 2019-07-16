@@ -1,0 +1,11 @@
+<div id="app">
+  <div class="vid"><video #video id="video" style="height: 90vh;" autoplay></video></div>
+  <div class="num">{{this.num}}</div>
+  <div class="btnPic">
+      <button mat-raised-button color="accent" *ngIf="this.pictureTaked" (click)="this.retryPicture()">Retry!</button>
+      <button mat-raised-button color="accent" *ngIf="this.pictureTaked" (click)="this.sendPicture()">send!</button>
+      <button mat-raised-button color="accent" *ngIf="!this.pictureTaked && !this.delays" (click)="this.takePicture()">Take a picture!</button>
+  </div>
+  <canvas #canvas id="canvas"></canvas>
+  <img #imgPic class="imgPic">
+</div>

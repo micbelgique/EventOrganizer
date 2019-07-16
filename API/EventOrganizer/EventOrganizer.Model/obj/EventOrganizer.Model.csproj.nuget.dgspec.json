@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj": {}
+    "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj": {}
   },
   "projects": {
-    "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj": {
+    "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj",
+        "projectUniqueName": "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj",
         "projectName": "EventOrganizer.Model",
-        "projectPath": "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj",
+        "projectPath": "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj",
         "packagesPath": "C:\\Users\\NathanPire\\.nuget\\packages\\",
-        "outputPath": "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\obj\\",
+        "outputPath": "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

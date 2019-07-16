@@ -48,7 +48,9 @@ namespace EventOrganizer.API
             app.UseCors(x => x
                 .WithOrigins(
                     "http://localhost:4200",
-                    "https://hitw2019leaderboard.azurewebsites.net")
+                    "https://hitw2019leaderboard.azurewebsites.net",
+                    "https://hitw2019dashboard.azurewebsites.net",
+                    "https://hitw2019photoBox.azurewebsites.net")
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials());
