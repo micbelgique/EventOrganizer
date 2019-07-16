@@ -1,0 +1,31 @@
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let item of this.datasFromApi">
+    <mat-expansion-panel-header *ngIf="item.user">
+      <mat-panel-title>
+        <img mat-card-avatar src="{{item.user.userProfilePictureUrl}}">
+        {{ item.user.name }}
+      </mat-panel-title>
+      <mat-panel-description>
+        @{{ item.user.username }} {{item.createdAt | date:'medium':'+0400' }}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-expansion-panel-header *ngIf="!item.user">
+        <mat-panel-title>
+            Instagram User
+        </mat-panel-title>
+        <mat-panel-description>
+          {{item.createdAt | date:'medium':'+0400' }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-grid-list cols="1" rowHeight="9:1">
+          <mat-grid-tile *ngIf="item.pictureUrl">
+              <img class="pictureAnalyse" src="{{item.pictureUrl}}">
+          </mat-grid-tile>
+        </mat-grid-list>
+        <div *ngIf="item.text">
+            Text: {{item.text}}<br>
+        </div>
+        item removed: {{item.removed}}
+        <button mat-flat-button color="primary" (click)="this.banAPicture(item.id)">Ban this post</button>
+  </mat-expansion-panel>
+</mat-accordion>

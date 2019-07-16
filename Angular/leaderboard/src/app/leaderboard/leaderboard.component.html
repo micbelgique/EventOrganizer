@@ -1,0 +1,24 @@
+<mat-grid-list cols="1" rowHeight="1.8:1">
+  <div *ngFor="let item of this.datas">
+      <mat-grid-tile *ngIf="!item.removed">
+          <mat-card class="card">
+            <mat-card-header *ngIf="item.user">
+                <img mat-card-avatar class="header-pic" src="{{item.user.userProfilePictureUrl}}">
+                <mat-card-title class="header">{{ item.user.name }}</mat-card-title>
+                <mat-card-subtitle>@{{ item.user.username }} <div class="date">{{item.createdAt | date:'medium':'+0400' }}</div></mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-header *ngIf="!item.user">
+                <img mat-card-avatar class="header-pic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/220px-Instagram_logo_2016.svg.png">
+                <mat-card-title class="header">Instagram User</mat-card-title>
+                <mat-card-subtitle><div class="date">{{item.createdAt | date:'medium':'+0400' }}</div></mat-card-subtitle>
+            </mat-card-header>
+            <img *ngIf="item.pictureUrl" class="img-card" algin="middle" src="{{item.pictureUrl}}">
+            <mat-card-content>
+              <div *ngIf="!item.pictureUrl" class="text">
+                {{item.text}}
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </mat-grid-tile>
+  </div>
+</mat-grid-list>
