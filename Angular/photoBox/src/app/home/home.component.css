@@ -3,6 +3,7 @@
 }
 .vid {
   position: relative;
+  height: 90vh;
   z-index: 0;
   display: block;
   margin-left: auto;
@@ -12,14 +13,25 @@
 .num {
   position:absolute;
   top:20%;
-  left:45%;
+  left:44%;
   z-index:1;
   font-size: 40vh;
-  color: red;
+  color: purple;
 }
 .btnPic {
   position: absolute;
   top:85%;
-  left:47%;
+  left:45%;
   z-index: 2;
+}
+#canvas {
+  position: absolute;
+  top:20%;
+  display: none;
+}
+.imgPic {
+  position: absolute;
+  z-index: 1;
+  top: 1%;
+  left: 20%;
 }

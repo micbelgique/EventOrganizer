@@ -3,8 +3,9 @@
   <div class="num">{{this.num}}</div>
   <div class="btnPic">
       <button mat-raised-button color="accent" *ngIf="this.pictureTaked" (click)="this.retryPicture()">Retry!</button>
-      <button mat-raised-button color="accent" *ngIf="!this.pictureTaked" (click)="this.takePicture()">Take a picture!</button>
+      <button mat-raised-button color="accent" *ngIf="this.pictureTaked" (click)="this.sendPicture()">send!</button>
+      <button mat-raised-button color="accent" *ngIf="!this.pictureTaked && !this.delays" (click)="this.takePicture()">Take a picture!</button>
   </div>
-  <canvas hidden #canvas id="canvas" width="640" style="height: 90vh;"></canvas>
+  <canvas #canvas id="canvas"></canvas>
+  <img #imgPic class="imgPic">
 </div>
-<img #imgPic>
