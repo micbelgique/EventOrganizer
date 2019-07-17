@@ -2,13 +2,15 @@
   position: relative;
 }
 .vid {
-  position: relative;
+  position: absolute;
   height: 90vh;
   z-index: 0;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 50%;
+  top: 5%;
+  left: 10%;
 }
 .num {
   position:absolute;
@@ -32,6 +34,6 @@
 .imgPic {
   position: absolute;
   z-index: 1;
-  top: 1%;
-  left: 20%;
+  top: 5%;
+  left: 10%;
 }
