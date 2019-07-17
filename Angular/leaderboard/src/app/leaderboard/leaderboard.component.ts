@@ -18,7 +18,12 @@ export class LeaderboardComponent implements OnInit {
   }
   changePictures() {
     this.datas = [];
-    this.datas.push(this.datasFromApi[this.getRandomInt(this.datasFromApi.length)]);
+    const data = this.datasFromApi[this.getRandomInt(this.datasFromApi.length)];
+    if (data.removed) {
+      this.changePictures();
+    } else {
+      this.datas.push(data);
+    }
   }
   getNewPictures() {
     this.httpClient.get('https://hitw2019api.azurewebsites.net/api/pictures').subscribe(
