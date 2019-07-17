@@ -90,7 +90,7 @@ export class HomeComponent implements OnInit {
           user: {
             username: 'PhotoBox',
             name: 'PhotoBox',
-            userPictureUrl: 'https://hitw2019blob.blob.core.windows.net/hitw2019/' + namePhoto
+            userProfilePictureUrl: 'https://hitw2019blob.blob.core.windows.net/hitw2019/' + namePhoto
           }
         };
         console.log(picture);
