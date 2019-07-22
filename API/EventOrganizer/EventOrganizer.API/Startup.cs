@@ -50,7 +50,8 @@ namespace EventOrganizer.API
                     "http://localhost:4200",
                     "https://hitw2019leaderboard.azurewebsites.net",
                     "https://hitw2019dashboard.azurewebsites.net",
-                    "https://hitw2019photoBox.azurewebsites.net")
+                    "https://hitw2019photoBox.azurewebsites.net",
+                    "https://hitw2019.azurewebsites.net")
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials());
