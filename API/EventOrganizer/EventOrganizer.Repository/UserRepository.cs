@@ -1,47 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using EventOrganizer.Model;
 using Microsoft.EntityFrameworkCore;
 
 namespace EventOrganizer.Repository
 {
-    public class UserPictureRepository : IRepository<UserPicture>
+    public class UserRepository:IRepository<User>
     {
         private readonly Context _context;
 
-        public UserPictureRepository(Context context)
+        public UserRepository(Context context)
         {
             _context = context;
         }
 
-        public IEnumerable<UserPicture> GetAll()
+        public IEnumerable<User> GetAll()
         {
-            return _context.UserPictures;
+            return _context.Users.Include(u => u.UserTeam);
         }
 
-        public UserPicture Get(long id)
+        public User Get(long id)
         {
-            return _context.UserPictures.FirstOrDefault(userPicture => userPicture.IdFromPlat == id);
+            return _context.Users.FirstOrDefault(u => u.Id == id);
         }
 
-        public UserPicture GetById(int id)
+        public User GetById(int id)
         {
-            return _context.UserPictures.FirstOrDefault(e => e.Id == id);
+            throw new NotImplementedException();
         }
-        public async Task<bool> Insert(UserPicture entity)
+
+        public async Task<bool> Insert(User entity)
         {
-            var verify = Get(entity.IdFromPlat);
+            var verify = Get(entity.Id);
             if (verify != null)
                 return false;
             try
             {
-                _context.UserPictures.Add(entity);
+                _context.Users.Add(entity);
                 await _context.SaveChangesAsync();
+
                 return true;
             }
-            catch (Exception )
+            catch (Exception e)
             {
                 return false;
             }
@@ -54,17 +57,17 @@ namespace EventOrganizer.Repository
                 return false;
             try
             {
-                _context.UserPictures.Remove(getObject);
+                _context.Users.Remove(getObject);
                 await _context.SaveChangesAsync();
                 return true;
             }
-            catch (Exception )
+            catch (Exception)
             {
                 return false;
             }
         }
 
-        public async Task<bool> Update(UserPicture entity)
+        public async Task<bool> Update(User entity)
         {
             try
             {
@@ -72,12 +75,11 @@ namespace EventOrganizer.Repository
                 await _context.SaveChangesAsync();
                 return true;
             }
-            catch (Exception )
+            catch (Exception)
             {
                 return false;
             }
         }
-
         public void Dispose()
         {
             _context?.Dispose();

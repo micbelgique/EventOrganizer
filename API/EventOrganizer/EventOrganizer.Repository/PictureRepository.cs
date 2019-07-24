@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EventOrganizer.Repository
 {
-    public class PictureRepository : IRepository<Picture>,IDisposable
+    public class PictureRepository : IRepository<Picture>
     {
         private readonly Context _context;
         public PictureRepository(Context context)
