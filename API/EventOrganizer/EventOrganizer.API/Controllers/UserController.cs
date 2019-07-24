@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using EventOrganizer.API.Services;
+﻿using EventOrganizer.API.Services;
 using EventOrganizer.Model;
 using EventOrganizer.Repository;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace EventOrganizer.API.Controllers
 {
@@ -55,7 +53,8 @@ namespace EventOrganizer.API.Controllers
             using (IRepository<User> userRepository = new UserRepository(_context))
             {
                 return userRepository.GetAll().Select(
-                    x=> {
+                    x =>
+                    {
                         x.Password = null;
                         return x;
                     }).ToList();
