@@ -34,12 +34,17 @@ namespace EventOrganizer.API.Services
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
             user.Token = tokenHandler.WriteToken(token);
-
             // remove password before returning
             user.Password = null;
-
             return user;
 
+        }
+
+        public string EncryptPassword(string password)
+        {
+            var data = Encoding.ASCII.GetBytes(password);
+            data = new System.Security.Cryptography.SHA256Managed().ComputeHash(data);
+            return Encoding.ASCII.GetString(data);
         }
         public void Dispose()
         {

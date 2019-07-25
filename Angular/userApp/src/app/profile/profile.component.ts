@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-declare function require(name: string);
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -45,11 +44,6 @@ export class ProfileComponent implements OnInit {
     );
   }
   connect() {
-
-    const passwordHash = require('password-hash');
-
-    const hashedPassword = passwordHash.generate(this.password);
-    console.log(hashedPassword);
     // tslint:disable-next-line:max-line-length
     this.httpClient.get('https://hitw2019api.azurewebsites.net/api/User?username=' + this.username + '&password=' + this.password).subscribe(
       (res: any) => {

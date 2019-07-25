@@ -28,6 +28,7 @@ namespace EventOrganizer.API.Controllers
             using (IRepository<User> userRepository = new UserRepository(_context))
             {
                 IUserService userService = new UserService(userRepository);
+                password = userService.EncryptPassword(password);
                 return userService.Authenticate(username, password);
             }
         }
@@ -40,10 +41,10 @@ namespace EventOrganizer.API.Controllers
                 var verifyUser = userRepository.GetAll().FirstOrDefault(u => u.Username == user.Username);
                 if (verifyUser != null)
                     return null;
-                var added = await userRepository.Insert(user);
-                if (!added) return null;
                 IUserService userService = new UserService(userRepository);
-                return userService.Authenticate(user.Username, user.Password);
+                user.Password = userService.EncryptPassword(user.Password);
+                var added = await userRepository.Insert(user);
+                return !added ? null : userService.Authenticate(user.Username, user.Password);
             }
         }
 
