@@ -1,0 +1,156 @@
+<button mat-button style="width: 25%;background-color: #61a653;color: white" *ngIf="!this.isThursday" (click)="this.change(0)">Thursday</button>
+<button mat-button style="width: 25%;background-color: white;color: #61a653" *ngIf="this.isThursday">Thursday</button>
+<button mat-button style="width: 25%;background-color: #61a653;color: white" *ngIf="!this.isFriday" (click)="this.change(1)">Friday</button>
+<button mat-button style="width: 25%;background-color: white;color: #61a653" *ngIf="this.isFriday">Friday</button>
+<button mat-button style="width: 25%;background-color: #61a653;color: white" *ngIf="!this.isSaturday" (click)="this.change(2)">Saturday</button>
+<button mat-button style="width: 25%;background-color: white;color: #61a653" *ngIf="this.isSaturday">Saturday</button>
+<button mat-button style="width: 25%;background-color: #61a653;color: white" *ngIf="!this.isSunday" (click)="this.change(3)">Sunday</button>
+<button mat-button style="width: 25%;background-color: white;color: #61a653" *ngIf="this.isSunday">Sunday</button>
+<mat-accordion *ngIf="this.isThursday">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        18:00
+      </mat-panel-title>
+      <mat-panel-description>
+        reception of the festival and installation at the campsite
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        20:30
+      </mat-panel-title>
+      <mat-panel-description>
+        presentation of the projects by the MIC and a glass of friendship
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+</mat-accordion>
+<mat-accordion *ngIf="this.isFriday">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        07:30
+      </mat-panel-title>
+      <mat-panel-description>
+        doors open
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        08:00
+      </mat-panel-title>
+      <mat-panel-description>
+        breakfast
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        09:30
+      </mat-panel-title>
+      <mat-panel-description>
+        meeting with the project leaders
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        10:00
+      </mat-panel-title>
+      <mat-panel-description>
+        launch of the working groups
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        19:00
+      </mat-panel-title>
+      <mat-panel-description>
+        Concert
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+</mat-accordion>
+<mat-accordion *ngIf="this.isSaturday">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        08:00
+      </mat-panel-title>
+      <mat-panel-description>
+        Breakfast and launch of the second coding day
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        19:00
+      </mat-panel-title>
+      <mat-panel-description>
+          barbecue and entertainment
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+</mat-accordion>
+<mat-accordion *ngIf="this.isSunday">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        08:00
+      </mat-panel-title>
+      <mat-panel-description>
+        Breakfast and launch of the last day of coding
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        08:00
+      </mat-panel-title>
+      <mat-panel-description>
+        breakfast
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        13:00
+      </mat-panel-title>
+      <mat-panel-description>
+        meeting with the project leaders
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        14:00
+      </mat-panel-title>
+      <mat-panel-description>
+        Innovation fair and presentation of results
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        18:00
+      </mat-panel-title>
+      <mat-panel-description>
+        closing of the festival and friendship drink.
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+</mat-accordion>

@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EventOrganizer.Repository
 {
-    public class UserPictureRepository : IRepository<UserPicture>,IDisposable
+    public class UserPictureRepository : IRepository<UserPicture>
     {
         private readonly Context _context;
 
@@ -38,9 +38,7 @@ namespace EventOrganizer.Repository
             try
             {
                 _context.UserPictures.Add(entity);
-                _context.Database.ExecuteSqlCommand(@"SET IDENTITY_INSERT [dbo].[UserPictures] ON");
                 await _context.SaveChangesAsync();
-                _context.Database.ExecuteSqlCommand(@"SET IDENTITY_INSERT [dbo].[UserPictures] OFF");
                 return true;
             }
             catch (Exception )

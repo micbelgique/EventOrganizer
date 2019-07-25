@@ -1,0 +1,288 @@
+<button mat-button style="width: 50%;background-color: #61a653;color: white" *ngIf="!this.isVendredi" (click)="this.change()">Vendredi</button>
+<button mat-button style="width: 50%;background-color: white;color: #61a653" *ngIf="this.isVendredi">Vendredi</button>
+<button mat-button style="width: 50%;background-color: #61a653;color: white" *ngIf="this.isVendredi" (click)="this.change()">Samedi</button>
+<button mat-button style="width: 50%;background-color: white;color: #61a653" *ngIf="!this.isVendredi">Samedi</button>
+<mat-accordion *ngIf="this.isVendredi">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          13:00
+        </mat-panel-title>
+        <mat-panel-description>
+          Ouverture
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+</mat-expansion-panel>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      13:10
+    </mat-panel-title>
+    <mat-panel-description>
+      Développez avec Azure comme Spiderman
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <mat-grid-list cols="2" rowHeight="5:1">
+    <mat-grid-tile [rowspan]="5">
+      <img src="../../assets/DenisVoituron.jpg" style="height: 100%;">
+    </mat-grid-tile>
+    <mat-grid-tile>
+      Denis Voituron
+    </mat-grid-tile>
+    <mat-grid-tile>
+      Microsoft MVP
+    </mat-grid-tile>
+    <mat-grid-tile>
+      Github: <a href="https://github.com/dvoituron">@dvoituron</a>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      Website: <a href="https://www.dvoituron.be/">Blog</a>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      Twitter: <a href="https://twitter.com/denisvoituron">@denisvoituron</a>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-expansion-panel>
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        13:45
+      </mat-panel-title>
+      <mat-panel-description>
+        .NET Core, l'essayer c'est l'adopter
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-grid-list cols="2" rowHeight="5:1">
+        <mat-grid-tile [rowspan]="5">
+          <img src="../../assets/AdrienClerbois.jpg" style="height: 100%;">
+        </mat-grid-tile>
+        <mat-grid-tile>
+          Adrien Clerbois
+        </mat-grid-tile>
+        <mat-grid-tile>
+          Microsoft MVP
+        </mat-grid-tile>
+        <mat-grid-tile>
+          Github: <a href="https://github.com/aclerbois">@aclerbois</a>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          Website: <a href="https://www.aclerbois.be/">Blog</a>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          Twitter: <a href="https://twitter.com/AClerbois">@AClerbois</a>
+        </mat-grid-tile>
+      </mat-grid-list>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          14:20
+        </mat-panel-title>
+        <mat-panel-description>
+          Pause
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          14:30
+        </mat-panel-title>
+        <mat-panel-description>
+          Vue.JS: New Generation
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          15:05
+        </mat-panel-title>
+        <mat-panel-description>
+          Change/Save the world with Azure Functions
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          15:40
+        </mat-panel-title>
+        <mat-panel-description>
+          Pause
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          15:50
+        </mat-panel-title>
+        <mat-panel-description>
+          Learn Angular like The Flash
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          16:25
+        </mat-panel-title>
+        <mat-panel-description>
+          How to kick start an Ethereum Blockchain application?
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          17:00
+        </mat-panel-title>
+        <mat-panel-description>
+          Pause
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          17:10
+        </mat-panel-title>
+        <mat-panel-description>
+          Cognitive Services :"Comment reproduire l'AI de Person Of Interest facilement"
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          17:45
+        </mat-panel-title>
+        <mat-panel-description>
+          Vr Technocité
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  </mat-expansion-panel>
+</mat-accordion>
+<mat-accordion *ngIf="!this.isVendredi">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          13:00
+        </mat-panel-title>
+        <mat-panel-description>
+          Ouverture
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+</mat-expansion-panel>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      13:10
+    </mat-panel-title>
+    <mat-panel-description>
+      Simple is not easy: Clean Code
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+</mat-expansion-panel>
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        13:45
+      </mat-panel-title>
+      <mat-panel-description>
+        Téléportons des qbits dans les bois grâce au Q#
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          14:20
+        </mat-panel-title>
+        <mat-panel-description>
+          Pause
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          14:30
+        </mat-panel-title>
+        <mat-panel-description>
+          Azure Devops: le saint graal pour les devs
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          15:05
+        </mat-panel-title>
+        <mat-panel-description>
+          Let's go for a Quest in a wood: portable VR
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          15:40
+        </mat-panel-title>
+        <mat-panel-description>
+          Pause
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          15:50
+        </mat-panel-title>
+        <mat-panel-description>
+          Master the power of git in VSCode
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          16:25
+        </mat-panel-title>
+        <mat-panel-description>
+          LauRA et sa tarte aux framboises
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          17:00
+        </mat-panel-title>
+        <mat-panel-description>
+          Pause
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          17:10
+        </mat-panel-title>
+        <mat-panel-description>
+          Tous dehors ! On passe votre projet VR sur Hololens
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          17:45
+        </mat-panel-title>
+        <mat-panel-description>
+          BlockChain For Good
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  </mat-expansion-panel>
+</mat-accordion>

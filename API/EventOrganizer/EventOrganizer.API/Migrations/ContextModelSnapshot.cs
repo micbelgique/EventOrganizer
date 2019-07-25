@@ -44,6 +44,40 @@ namespace EventOrganizer.API.Migrations
                     b.ToTable("Pictures");
                 });
 
+            modelBuilder.Entity("EventOrganizer.Model.Team", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Teams");
+                });
+
+            modelBuilder.Entity("EventOrganizer.Model.User", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Password");
+
+                    b.Property<string>("Token");
+
+                    b.Property<long?>("UserTeamId");
+
+                    b.Property<string>("Username");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserTeamId");
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("EventOrganizer.Model.UserPicture", b =>
                 {
                     b.Property<long>("Id")
@@ -68,6 +102,13 @@ namespace EventOrganizer.API.Migrations
                     b.HasOne("EventOrganizer.Model.UserPicture", "User")
                         .WithMany()
                         .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("EventOrganizer.Model.User", b =>
+                {
+                    b.HasOne("EventOrganizer.Model.Team", "UserTeam")
+                        .WithMany("Users")
+                        .HasForeignKey("UserTeamId");
                 });
 #pragma warning restore 612, 618
         }

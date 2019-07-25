@@ -1,0 +1,12 @@
+<div class="formPhoto">
+    <mat-form-field class="fullWidth">
+        <input matInput placeholder="Enter your name:" [(ngModel)]="this.username">
+      </mat-form-field>
+      <div class="fullWidth">
+        Choose photos you want to share with people!<br>
+        <input mat-button style="background-color: #61a653;color: white" type="file" placeholder="Choose your photos!" multiple (change)="SendPicture($event)" /><br><br><br>
+        <button mat-button *ngIf="!this.loading && this.picturesApi.length >0" style="background-color: #61a653;color: white" (click)="this.sendPictureToApi()">Send them!</button>
+        <mat-spinner style="margin: 0 auto;" *ngIf="this.load"></mat-spinner>
+      </div>
+
+</div>
