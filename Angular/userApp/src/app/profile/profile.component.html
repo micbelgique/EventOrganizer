@@ -1,3 +1,27 @@
-<input type="text" [(ngModel)]="this.username" placeholder="username">
-<input type="password" [(ngModel)]="this.password" placeholder="password">
-<button (click)="this.connect()"></button>
+<mat-accordion>
+  <mat-expansion-panel *ngIf="this.connected">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Your profile
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    {{this.userLocal.username}}
+    <button mat-raised-button color="warn"  style="width: 100%"  (click)="this.logOut()">Log out</button>
+  </mat-expansion-panel>
+  <mat-expansion-panel [hideToggle]="true" [expanded]="true" *ngIf="!this.connected">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Connect or Register you!
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="your username" [(ngModel)]="this.username">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input type="password" matInput placeholder="Your password" [(ngModel)]="this.password">
+    </mat-form-field>
+    <button mat-button style="width: 100%;background-color: #61a653;color: white;margin-bottom: 3%"  (click)="this.connect()">Connect</button>
+    <br>
+    <button mat-button style="width: 100%;background-color: #61a653;color: white" (click)="this.register()">Register</button>
+  </mat-expansion-panel>
+</mat-accordion>

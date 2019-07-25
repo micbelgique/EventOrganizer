@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { NotifierService } from 'angular-notifier';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -12,7 +13,8 @@ export class ProfileComponent implements OnInit {
   connected: boolean;
   private httpHeader: HttpHeaders;
   constructor(
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private notifier: NotifierService
   ) {
     if (!localStorage.getItem('user')) {
       this.connected = false;
@@ -40,6 +42,7 @@ export class ProfileComponent implements OnInit {
         this.userLocal = null;
         this.connected = false;
         localStorage.removeItem('user');
+        this.notifier.notify('error', 'You need to login you');
       }
     );
   }
@@ -47,9 +50,18 @@ export class ProfileComponent implements OnInit {
     // tslint:disable-next-line:max-line-length
     this.httpClient.get('https://hitw2019api.azurewebsites.net/api/User?username=' + this.username + '&password=' + this.password).subscribe(
       (res: any) => {
-        this.userLocal = res;
-        localStorage.setItem('user', JSON.stringify(this.userLocal));
-        this.connected = true;
+        if (res == null) {
+          this.notifier.notify('error', 'Username or password incorrect');
+        } else {
+          this.userLocal = res;
+          console.log(res);
+          localStorage.setItem('user', JSON.stringify(this.userLocal));
+          this.connected = true;
+          this.notifier.notify('success', 'succefully logged in');
+        }
+      },
+      (err: any) => {
+        this.notifier.notify('error', 'An error occured');
       }
     );
   }
@@ -60,10 +72,22 @@ export class ProfileComponent implements OnInit {
     };
     this.httpClient.post('https://hitw2019api.azurewebsites.net/api/User', user).subscribe(
       (res: any) => {
-        this.userLocal = res;
-        localStorage.setItem('user', JSON.stringify(this.userLocal));
-        this.connected = true;
+        if (res == null) {
+          this.notifier.notify('error', 'an account already exsist with this username');
+        } else {
+          this.userLocal = res;
+          localStorage.setItem('user', JSON.stringify(this.userLocal));
+          this.connected = true;
+          this.notifier.notify('success', 'succefully account created and logged in');
+        }
+      },
+      (err: any) => {
+        this.notifier.notify('error', 'An error occured');
       }
     );
+  }
+  logOut() {
+    this.connected = false;
+    localStorage.removeItem('user');
   }
 }
