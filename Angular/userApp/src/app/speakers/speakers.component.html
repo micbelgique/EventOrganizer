@@ -1,15 +1,15 @@
-<button mat-button style="width: 50%;background-color: #61a653;color: white" *ngIf="!this.isVendredi" (click)="this.change()">Vendredi</button>
-<button mat-button style="width: 50%;background-color: white;color: #61a653" *ngIf="this.isVendredi">Vendredi</button>
-<button mat-button style="width: 50%;background-color: #61a653;color: white" *ngIf="this.isVendredi" (click)="this.change()">Samedi</button>
-<button mat-button style="width: 50%;background-color: white;color: #61a653" *ngIf="!this.isVendredi">Samedi</button>
-<mat-accordion *ngIf="this.isVendredi">
+<button mat-button style="width: 50%;background-color: #61a653;color: white" *ngIf="!this.isFriday" (click)="this.change()">Friday</button>
+<button mat-button style="width: 50%;background-color: white;color: #61a653" *ngIf="this.isFriday">Friday</button>
+<button mat-button style="width: 50%;background-color: #61a653;color: white" *ngIf="this.isFriday" (click)="this.change()">Saturday</button>
+<button mat-button style="width: 50%;background-color: white;color: #61a653" *ngIf="!this.isFriday">Saturday</button>
+<mat-accordion *ngIf="this.isFriday">
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
           13:00
         </mat-panel-title>
         <mat-panel-description>
-          Ouverture
+          Opening
         </mat-panel-description>
     </mat-expansion-panel-header>
 </mat-expansion-panel>
@@ -79,7 +79,7 @@
           14:20
         </mat-panel-title>
         <mat-panel-description>
-          Pause
+          Break
         </mat-panel-description>
     </mat-expansion-panel-header>
   </mat-expansion-panel>
@@ -109,7 +109,7 @@
           15:40
         </mat-panel-title>
         <mat-panel-description>
-          Pause
+          Break
         </mat-panel-description>
       </mat-expansion-panel-header>
   </mat-expansion-panel>
@@ -139,7 +139,7 @@
           17:00
         </mat-panel-title>
         <mat-panel-description>
-          Pause
+          Break
         </mat-panel-description>
       </mat-expansion-panel-header>
   </mat-expansion-panel>
@@ -164,14 +164,14 @@
       </mat-expansion-panel-header>
   </mat-expansion-panel>
 </mat-accordion>
-<mat-accordion *ngIf="!this.isVendredi">
+<mat-accordion *ngIf="!this.isFriday">
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
           13:00
         </mat-panel-title>
         <mat-panel-description>
-          Ouverture
+          Opening
         </mat-panel-description>
     </mat-expansion-panel-header>
 </mat-expansion-panel>
@@ -201,7 +201,7 @@
           14:20
         </mat-panel-title>
         <mat-panel-description>
-          Pause
+          Break
         </mat-panel-description>
     </mat-expansion-panel-header>
   </mat-expansion-panel>
@@ -231,7 +231,7 @@
           15:40
         </mat-panel-title>
         <mat-panel-description>
-          Pause
+          Break
         </mat-panel-description>
       </mat-expansion-panel-header>
   </mat-expansion-panel>
@@ -261,7 +261,7 @@
           17:00
         </mat-panel-title>
         <mat-panel-description>
-          Pause
+          Break
         </mat-panel-description>
       </mat-expansion-panel-header>
   </mat-expansion-panel>
