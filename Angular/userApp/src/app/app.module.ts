@@ -26,6 +26,7 @@ import {
 import { FormsModule } from '@angular/forms';
 import { ProblemComponent } from './problem/problem.component';
 import { ProfileComponent } from './profile/profile.component';
+import { MapComponent } from './map/map.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { ProfileComponent } from './profile/profile.component';
     SpeakersComponent,
     PhotoComponent,
     ProblemComponent,
-    ProfileComponent
+    ProfileComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,

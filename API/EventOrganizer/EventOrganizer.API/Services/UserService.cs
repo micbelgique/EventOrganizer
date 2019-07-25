@@ -25,7 +25,7 @@ namespace EventOrganizer.API.Services
             var key = Encoding.ASCII.GetBytes("hMlBevhXPdc9ucEZYcxyMmZ2p11RWGteFbH56YYRoAsvGKHkAS3-Tqg_nPNA9S9V_OZE1XqTLQRNWwGc1roEtd-NatZI6AJ1tHXfQnpMJZiUW8FQKF4il2Km9Im3raVnk5A9G1l6r51C-4YsCUGrRA1oamJFvrmTe3rh2Z0OoB6L2xS9hRnw9p3US939JY7LH_zh3NhwJ3o2D91TlxrLgaCLEy0pnHfL0PItTLAb1fFnVb6OBwp33ICTWfR617ozyb6Bgvr7jhqtY_OrvsnPmGFLuhrnzUqUJNbL37zyPtbvUxMM0S1rtSwVh700fGVhKSQYbIOkl23vrk4dR2DwlQ");
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                Subject = new ClaimsIdentity(new Claim[]
+                Subject = new ClaimsIdentity(new[]
                 {
                     new Claim(ClaimTypes.Name, user.Id.ToString())
                 }),
