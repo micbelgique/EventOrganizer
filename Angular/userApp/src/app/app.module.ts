@@ -25,13 +25,17 @@ import {
 } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { ProblemComponent } from './problem/problem.component';
+import { ProfileComponent } from './profile/profile.component';
+import { MapComponent } from './map/map.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SpeakersComponent,
     PhotoComponent,
-    ProblemComponent
+    ProblemComponent,
+    ProfileComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,

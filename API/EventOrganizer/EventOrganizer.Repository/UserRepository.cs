@@ -1,14 +1,13 @@
-﻿using System;
+﻿using EventOrganizer.Model;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using EventOrganizer.Model;
-using Microsoft.EntityFrameworkCore;
 
 namespace EventOrganizer.Repository
 {
-    public class UserRepository:IRepository<User>
+    public class UserRepository : IRepository<User>
     {
         private readonly Context _context;
 
@@ -44,7 +43,7 @@ namespace EventOrganizer.Repository
 
                 return true;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return false;
             }
