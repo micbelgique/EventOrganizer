@@ -1,13 +1,25 @@
 <mat-accordion>
-  <mat-expansion-panel *ngIf="this.connected">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Your profile
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    {{this.userLocal.username}}
-    <button mat-raised-button color="warn"  style="width: 100%"  (click)="this.logOut()">Log out</button>
-  </mat-expansion-panel>
+  <div *ngIf="this.connected">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Your profile
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      Your username: {{this.userLocal.username}}
+      <button mat-raised-button color="warn"  style="width: 100%"  (click)="this.logOut()">Log out</button>
+    </mat-expansion-panel>
+    <mat-expansion-panel *ngIf="this.userLocal.userTeam">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Your team
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      the name of your team: {{this.userLocal.userTeam.name}}
+      <button mat-button style="width: 100%;background-color: #61a653;color: white" [routerLink]="['/teams']">More details</button>
+
+    </mat-expansion-panel>
+  </div>
   <mat-expansion-panel [hideToggle]="true" [expanded]="true" *ngIf="!this.connected">
     <mat-expansion-panel-header>
       <mat-panel-title>

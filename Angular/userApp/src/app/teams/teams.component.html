@@ -1,0 +1,56 @@
+<mat-accordion *ngIf="this.user.userTeam">
+  <mat-expansion-panel [expanded]="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Your team
+      </mat-panel-title>
+      <mat-panel-description>
+        {{this.user.userTeam.name}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-list>
+      <mat-list-item style="color: #61a653">
+        Members:
+      </mat-list-item>
+        <mat-list-item *ngFor="let u of this.user.userTeam.users">
+          {{u.username}}
+        </mat-list-item>
+      </mat-list>
+      <button mat-raised-button color="warn"  style="width: 100%"  (click)="this.joinOrLeaveATeam(this.user.userTeam.id)">Leave team</button>
+  </mat-expansion-panel>
+</mat-accordion>
+<mat-accordion *ngIf="!this.user.userTeam">
+    <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Create Your team
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="Enter the name of your team" [(ngModel)]="this.teamName">
+      </mat-form-field>
+
+      <button mat-button style="width: 100%;background-color: #61a653;color: white" (click)="this.createTeam()">Create your team</button>
+    </mat-expansion-panel>
+  </mat-accordion>
+<mat-list>
+  <mat-list-item>Other groups:</mat-list-item>
+</mat-list>
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let item of this.teams">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{item.name}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-list>
+        <mat-list-item style="color: #61a653">
+          Members:
+        </mat-list-item>
+          <mat-list-item *ngFor="let u of item.users">
+            {{u.username}}
+          </mat-list-item>
+        </mat-list>
+        <button mat-button style="width: 100%;background-color: #61a653;color: white" (click)="this.joinOrLeaveATeam(item.id)" *ngIf="!this.user.userTeam">Join this team</button>
+    </mat-expansion-panel>
+</mat-accordion>

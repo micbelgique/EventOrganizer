@@ -53,12 +53,15 @@ namespace EventOrganizer.API.Controllers
         {
             using (IRepository<User> userRepository = new UserRepository(_context))
             {
-                return userRepository.GetAll().Select(
-                    x =>
-                    {
-                        x.Password = null;
-                        return x;
-                    }).ToList();
+                var users = userRepository.GetAll().ToList();
+                foreach (var item in users)
+                {
+                    item.Password = null;
+                    if (item.UserTeam != null)
+                        item.UserTeam.Users = null;
+                }
+
+                return users;
             }
         }
 
