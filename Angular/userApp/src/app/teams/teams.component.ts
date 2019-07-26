@@ -36,9 +36,6 @@ export class TeamsComponent implements OnInit {
           } else {
             this.user.userTeam = null;
           }
-        } else {
-          this.location.replaceState('/');
-          this.router.navigate(['profile']);
         }
       }
     );
