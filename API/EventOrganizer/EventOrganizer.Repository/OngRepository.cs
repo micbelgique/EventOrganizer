@@ -1,14 +1,13 @@
-﻿using System;
+﻿using EventOrganizer.Model;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using EventOrganizer.Model;
-using Microsoft.EntityFrameworkCore;
 
 namespace EventOrganizer.Repository
 {
-    public class OngRepository:IRepository<Ong>
+    public class OngRepository : IRepository<Ong>
     {
         private readonly Context _context;
 
@@ -82,7 +81,6 @@ namespace EventOrganizer.Repository
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
                 return false;
             }
         }
