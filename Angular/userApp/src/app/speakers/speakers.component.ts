@@ -6,15 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./speakers.component.css']
 })
 export class SpeakersComponent implements OnInit {
-  isVendredi: boolean;
+  isFriday: boolean;
   constructor() {
-    this.isVendredi = true;
+    this.isFriday = true;
    }
 
   ngOnInit() {
   }
   change() {
-    this.isVendredi = !this.isVendredi;
+    this.isFriday = !this.isFriday;
   }
 
 }

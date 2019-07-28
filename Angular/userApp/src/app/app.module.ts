@@ -21,12 +21,15 @@ import {
   MatProgressSpinnerModule,
   MatExpansionModule,
   MatGridListModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatDividerModule
 } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { ProblemComponent } from './problem/problem.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MapComponent } from './map/map.component';
+import { TeamsComponent } from './teams/teams.component';
+import { OngComponent } from './ong/ong.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +38,9 @@ import { MapComponent } from './map/map.component';
     PhotoComponent,
     ProblemComponent,
     ProfileComponent,
-    MapComponent
+    MapComponent,
+    TeamsComponent,
+    OngComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +59,8 @@ import { MapComponent } from './map/map.component';
     MatExpansionModule,
     MatGridListModule,
     NotifierModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

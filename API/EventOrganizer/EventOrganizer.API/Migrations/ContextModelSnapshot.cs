@@ -19,6 +19,21 @@ namespace EventOrganizer.API.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("EventOrganizer.Model.Ong", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Website");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Ongs");
+                });
+
             modelBuilder.Entity("EventOrganizer.Model.Picture", b =>
                 {
                     b.Property<long>("Id")
@@ -55,6 +70,27 @@ namespace EventOrganizer.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Teams");
+                });
+
+            modelBuilder.Entity("EventOrganizer.Model.TimeTableOng", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long?>("OngId");
+
+                    b.Property<long?>("SelectedTeamId");
+
+                    b.Property<DateTime>("Time");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OngId");
+
+                    b.HasIndex("SelectedTeamId");
+
+                    b.ToTable("TimeTableOngs");
                 });
 
             modelBuilder.Entity("EventOrganizer.Model.User", b =>
@@ -102,6 +138,17 @@ namespace EventOrganizer.API.Migrations
                     b.HasOne("EventOrganizer.Model.UserPicture", "User")
                         .WithMany()
                         .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("EventOrganizer.Model.TimeTableOng", b =>
+                {
+                    b.HasOne("EventOrganizer.Model.Ong")
+                        .WithMany("TimeTables")
+                        .HasForeignKey("OngId");
+
+                    b.HasOne("EventOrganizer.Model.Team", "SelectedTeam")
+                        .WithMany()
+                        .HasForeignKey("SelectedTeamId");
                 });
 
             modelBuilder.Entity("EventOrganizer.Model.User", b =>

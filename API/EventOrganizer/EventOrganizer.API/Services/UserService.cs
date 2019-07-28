@@ -36,6 +36,8 @@ namespace EventOrganizer.API.Services
             user.Token = tokenHandler.WriteToken(token);
             // remove password before returning
             user.Password = null;
+            if (user.UserTeam != null)
+                user.UserTeam.Users = null;
             return user;
 
         }
