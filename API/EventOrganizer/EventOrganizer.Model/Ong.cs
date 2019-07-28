@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace EventOrganizer.Model
 {
-    public class Ong:Entity
+    public class Ong : Entity
     {
         public string Name { get; set; }
         public string Website { get; set; }

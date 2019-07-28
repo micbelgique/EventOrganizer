@@ -28,7 +28,7 @@ namespace EventOrganizer.Repository
 
         public Ong Get(long id)
         {
-            return _context.Ongs.FirstOrDefault(x => x.Id == id);
+            return _context.Ongs.Include(x => x.TimeTables).FirstOrDefault(x => x.Id == id);
         }
 
         public Ong GetById(int id)
@@ -81,6 +81,7 @@ namespace EventOrganizer.Repository
             }
             catch (Exception e)
             {
+                Console.WriteLine(e);
                 return false;
             }
         }

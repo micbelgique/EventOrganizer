@@ -1,13 +1,10 @@
-﻿using System;
+﻿using EventOrganizer.Model;
+using EventOrganizer.Repository;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using EventOrganizer.API.Services;
-using EventOrganizer.Model;
-using EventOrganizer.Repository;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 
 namespace EventOrganizer.API.Controllers
 {
@@ -51,10 +48,10 @@ namespace EventOrganizer.API.Controllers
             }
         }
         [HttpPut("{userId}")]
-        public async Task<Team> UpdateTeam(long userId,[FromBody] Team team)
+        public async Task<Team> UpdateTeam(long userId, [FromBody] Team team)
         {
             using (IRepository<Team> teamRepository = new TeamRepository(_context))
-            using(IRepository<User> userRepository = new UserRepository(_context))
+            using (IRepository<User> userRepository = new UserRepository(_context))
             {
                 var t = teamRepository.Get(team.Id);
                 var user = userRepository.Get(userId);
@@ -68,15 +65,6 @@ namespace EventOrganizer.API.Controllers
                 if (await teamRepository.Update(t))
                     return t;
                 return null;
-            }
-        }
-
-        [HttpDelete]
-        public async Task<bool> DeleteTeam(long id)
-        {
-            using (IRepository<Team> teamRepository = new TeamRepository(_context))
-            {
-                return await teamRepository.Delete(id);
             }
         }
     }
