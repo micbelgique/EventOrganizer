@@ -55,6 +55,7 @@ namespace EventOrganizer.API.Controllers
             {
                 var t = teamRepository.Get(team.Id);
                 var user = userRepository.Get(userId);
+                //user.UserTeam = null;
                 if (t.Users.Contains(user))
                 {
                     t.Users.Remove(user);
@@ -63,7 +64,13 @@ namespace EventOrganizer.API.Controllers
                     t.Users.Add(user);
 
                 if (await teamRepository.Update(t))
+                {
+                    foreach (var item in t.Users)
+                    {
+                        item.UserTeam = null;
+                    }
                     return t;
+                }
                 return null;
             }
         }

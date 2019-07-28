@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace EventOrganizer.Repository
 {
-    public class OngRepository : IRepository<Ong>
+    public class TimeTableOngRepository : IRepository<TimeTableOng>
     {
         private readonly Context _context;
 
-        public OngRepository(Context context)
+        public TimeTableOngRepository(Context context)
         {
             _context = context;
         }
@@ -21,29 +21,29 @@ namespace EventOrganizer.Repository
             _context?.Dispose();
         }
 
-        public IEnumerable<Ong> GetAll()
+        public IEnumerable<TimeTableOng> GetAll()
         {
-            return _context.Ongs.Include(x => x.TimeTables).ThenInclude(w=> w.SelectedTeam);
+            return _context.TimeTableOngs;
         }
 
-        public Ong Get(long id)
+        public TimeTableOng Get(long id)
         {
-            return _context.Ongs.Include(x => x.TimeTables).FirstOrDefault(x => x.Id == id);
+            return _context.TimeTableOngs.Include(x => x.SelectedTeam).FirstOrDefault(x => x.Id == id);
         }
 
-        public Ong GetById(int id)
+        public TimeTableOng GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<bool> Insert(Ong entity)
+        public async Task<bool> Insert(TimeTableOng entity)
         {
             var verify = Get(entity.Id);
             if (verify != null)
                 return false;
             try
             {
-                _context.Ongs.Add(entity);
+                _context.TimeTableOngs.Add(entity);
                 await _context.SaveChangesAsync();
 
                 return true;
@@ -61,7 +61,7 @@ namespace EventOrganizer.Repository
                 return false;
             try
             {
-                _context.Ongs.Remove(getObject);
+                _context.TimeTableOngs.Remove(getObject);
                 await _context.SaveChangesAsync();
                 return true;
             }
@@ -71,7 +71,7 @@ namespace EventOrganizer.Repository
             }
         }
 
-        public async Task<bool> Update(Ong entity)
+        public async Task<bool> Update(TimeTableOng entity)
         {
             try
             {

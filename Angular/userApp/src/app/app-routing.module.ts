@@ -7,6 +7,7 @@ import { ProblemComponent } from './problem/problem.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MapComponent } from './map/map.component';
 import { TeamsComponent } from './teams/teams.component';
+import { OngComponent } from './ong/ong.component';
 
 const routes: Routes = [
   {path: 'photo', component: PhotoComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'profile', component: ProfileComponent},
   {path: 'map', component: MapComponent},
   {path: 'teams', component: TeamsComponent},
+  {path:'ong', component: OngComponent},
   {path: '**', component: HomeComponent}
 ];
 
