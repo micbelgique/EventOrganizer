@@ -9,6 +9,8 @@ namespace EventOrganizer.Repository
         public DbSet<UserPicture> UserPictures { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Team> Teams { get; set; }
+        public DbSet<TimeTableOng> TimeTableOngs { get; set; }
+        public DbSet<Ong> Ongs { get; set; }
 
         public Context(DbContextOptions<Context> contextOptions) : base(contextOptions) { }
     }

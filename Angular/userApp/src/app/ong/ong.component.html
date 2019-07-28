@@ -1,0 +1,22 @@
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let item of this.ongs">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{item.name}}
+      </mat-panel-title>
+      <mat-panel-description>
+        <a href="{{item.website}}">website</a>
+      </mat-panel-description>
+  </mat-expansion-panel-header>
+    <mat-grid-list cols="2" *ngFor="let i of item.timeTables" rowHeight="3:1">
+        <mat-grid-tile>{{i.time | date:'short'}}</mat-grid-tile>
+        <mat-grid-tile *ngIf="!this.i.selectedTeam && this.user && this.user.userTeam">
+          <button mat-button style="width: 100%;background-color: #61a653;color: white" (click)="this.takeThisTime(i.id,item.id)">Take this time</button>
+        </mat-grid-tile>
+        <mat-grid-tile *ngIf="this.i.selectedTeam">
+          {{i.selectedTeam.name}}
+        </mat-grid-tile>
+        <mat-divider></mat-divider>
+    </mat-grid-list>
+</mat-expansion-panel>
+</mat-accordion>

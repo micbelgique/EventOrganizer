@@ -11,6 +11,9 @@
                 <button mat-button class="btnMenuList" (click)="drawer.toggle()" [routerLink]="['/teams']">Teams</button>
             </mat-list-item>
             <mat-list-item role="listitem">
+                <button mat-button class="btnMenuList" (click)="drawer.toggle()" [routerLink]="['/ong']">ONGs</button>
+            </mat-list-item>
+            <mat-list-item role="listitem">
                 <button mat-button class="btnMenuList" (click)="drawer.toggle()" [routerLink]="['/photo']">Add your photos!</button>
             </mat-list-item>
             <mat-list-item role="listitem">
@@ -23,6 +26,7 @@
                 <button mat-raised-button style="width: 100%" color="warn" (click)="drawer.toggle()" [routerLink]="['/problem']">Info?</button>
             </mat-list-item>
           </mat-list>
+          <a href="https://github.com/micbelgique/EventOrganizer"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" id="imgGithub"></a>
     </mat-drawer>
     <div class="example-sidenav-content">
       <mat-toolbar style="height: 7vh;">

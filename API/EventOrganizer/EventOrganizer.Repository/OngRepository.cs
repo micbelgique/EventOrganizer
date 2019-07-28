@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace EventOrganizer.Repository
 {
-    public class TeamRepository : IRepository<Team>
+    public class OngRepository : IRepository<Ong>
     {
         private readonly Context _context;
 
-        public TeamRepository(Context context)
+        public OngRepository(Context context)
         {
             _context = context;
         }
@@ -21,29 +21,29 @@ namespace EventOrganizer.Repository
             _context?.Dispose();
         }
 
-        public IEnumerable<Team> GetAll()
+        public IEnumerable<Ong> GetAll()
         {
-            return _context.Teams.Include(x => x.Users);
+            return _context.Ongs.Include(x => x.TimeTables).ThenInclude(w=> w.SelectedTeam);
         }
 
-        public Team Get(long id)
+        public Ong Get(long id)
         {
-            return _context.Teams.FirstOrDefault(x => x.Id == id);
+            return _context.Ongs.Include(x => x.TimeTables).FirstOrDefault(x => x.Id == id);
         }
 
-        public Team GetById(int id)
+        public Ong GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<bool> Insert(Team entity)
+        public async Task<bool> Insert(Ong entity)
         {
             var verify = Get(entity.Id);
             if (verify != null)
                 return false;
             try
             {
-                _context.Teams.Add(entity);
+                _context.Ongs.Add(entity);
                 await _context.SaveChangesAsync();
 
                 return true;
@@ -61,7 +61,7 @@ namespace EventOrganizer.Repository
                 return false;
             try
             {
-                _context.Teams.Remove(getObject);
+                _context.Ongs.Remove(getObject);
                 await _context.SaveChangesAsync();
                 return true;
             }
@@ -71,7 +71,7 @@ namespace EventOrganizer.Repository
             }
         }
 
-        public async Task<bool> Update(Team entity)
+        public async Task<bool> Update(Ong entity)
         {
             try
             {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
+import { NotifierService } from 'angular-notifier';
 @Component({
   selector: 'app-teams',
   templateUrl: './teams.component.html',
@@ -12,10 +13,11 @@ export class TeamsComponent implements OnInit {
   private httpHeaders: HttpHeaders;
   user = JSON.parse(localStorage.getItem('user'));
   teams = [];
-  private location: Location;
-  private router: Router;
   constructor(
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private notifier: NotifierService,
+    private location: Location,
+    private router: Router
   ) {
     this.getTeams();
   }
@@ -48,7 +50,12 @@ export class TeamsComponent implements OnInit {
     // tslint:disable-next-line:max-line-length
     this.httpClient.put('https://hitw2019api.azurewebsites.net/api/teams/' + this.user.id, team, {headers: this.httpHeaders}).subscribe(
       (res) => {
-          this.updateUser();
+        this.notifier.notify('success', 'action succefully done');
+        this.updateUser();
+      }, (err) => {
+        this.notifier.notify('error', 'an error occured');
+        this.location.replaceState('/'); // clears browser history so they can't navigate with back button
+        this.router.navigate(['profile']);
       }
     );
   }
@@ -63,6 +70,10 @@ export class TeamsComponent implements OnInit {
         this.user.token = token;
         localStorage.setItem('user', JSON.stringify(this.user));
         this.getTeams();
+      }, (err) => {
+        this.notifier.notify('error', 'an error occured');
+        this.location.replaceState('/'); // clears browser history so they can't navigate with back button
+        this.router.navigate(['profile']);
       }
     );
   }
@@ -77,7 +88,12 @@ export class TeamsComponent implements OnInit {
       (res: any) => {
         this.teamName = null;
         this.teams.push(res);
+        this.notifier.notify('success', 'succefully created');
         this.joinOrLeaveATeam(res.id);
+      }, (err) => {
+        this.notifier.notify('error', 'an error occured');
+        this.location.replaceState('/'); // clears browser history so they can't navigate with back button
+        this.router.navigate(['profile']);
       });
   }
 }
