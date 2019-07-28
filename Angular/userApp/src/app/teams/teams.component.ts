@@ -48,9 +48,7 @@ export class TeamsComponent implements OnInit {
     // tslint:disable-next-line:max-line-length
     this.httpClient.put('https://hitw2019api.azurewebsites.net/api/teams/' + this.user.id, team, {headers: this.httpHeaders}).subscribe(
       (res) => {
-        if (res) {
           this.updateUser();
-        }
       }
     );
   }
@@ -64,9 +62,9 @@ export class TeamsComponent implements OnInit {
         this.user = res.find(x => x.id === this.user.id);
         this.user.token = token;
         localStorage.setItem('user', JSON.stringify(this.user));
+        this.getTeams();
       }
     );
-    this.getTeams();
   }
   createTeam() {
     const t = {
@@ -77,14 +75,9 @@ export class TeamsComponent implements OnInit {
     });
     this.httpClient.post('https://hitw2019api.azurewebsites.net/api/teams', t, {headers: this.httpHeaders}).subscribe(
       (res: any) => {
-        this.httpClient.put('https://hitw2019api.azurewebsites.net/api/teams/' + this.user.id, res, {headers: this.httpHeaders}).subscribe(
-          (resy) => {
-            if (res) {
-              this.updateUser();
-            }
-          }
-        );
-      }
-    );
+        this.teamName = null;
+        this.teams.push(res);
+        this.joinOrLeaveATeam(res.id);
+      });
   }
 }

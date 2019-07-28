@@ -51,7 +51,7 @@ namespace EventOrganizer.API.Controllers
             }
         }
         [HttpPut("{userId}")]
-        public async Task<bool> UpdateTeam(long userId,[FromBody] Team team)
+        public async Task<Team> UpdateTeam(long userId,[FromBody] Team team)
         {
             using (IRepository<Team> teamRepository = new TeamRepository(_context))
             using(IRepository<User> userRepository = new UserRepository(_context))
@@ -64,7 +64,10 @@ namespace EventOrganizer.API.Controllers
                 }
                 else
                     t.Users.Add(user);
-                return await teamRepository.Update(t);
+
+                if (await teamRepository.Update(t))
+                    return t;
+                return null;
             }
         }
 
