@@ -9,7 +9,9 @@ import { NotifierService } from 'angular-notifier';
 export class PhotoComponent implements OnInit {
   private httpheaders: HttpHeaders;
   public picturesApi = [];
-  public username = localStorage.getItem('username') === null ? 'Obiwan Kenoby': localStorage.getItem('username');
+  public username = localStorage.getItem('username') === null ?
+  localStorage.getItem('user') === null ?
+  'Obiwan Kenoby' : JSON.parse(localStorage.getItem('user')).username : localStorage.getItem('username');
   public loading: boolean;
   public load = false;
   constructor(
