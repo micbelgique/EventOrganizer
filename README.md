@@ -61,20 +61,24 @@ These two functions will be use to retrieve the tweets and Instagram post with a
 ### Photobox
 
 ![Photobox](https://hitw2019blob.blob.core.windows.net/hitw2019/Photobox.png)
+
 The Photobox is an app where you can take a picture of you and it will be added inside the solution like the 2 functions for social networks. It helps if you don't have a twitter or Instagram account or if you want to take a picture with more picture.
 
 ### Leaderboard
 ![Leaderboard](https://hitw2019blob.blob.core.windows.net/hitw2019/leaderboard.png)
+
 The Leaderboard is an app to show all the pictures and posts added inside the solution by the Photobox, the 2 functions and the UserApp. It's first function is to show it on a big screen to show the vibe of your event!
 
 ### Dashboard
 
 ![Dashboard](https://hitw2019blob.blob.core.windows.net/hitw2019/dashboard.PNG)
+
 The Dashboard is a place where you will find all posts from the 2 social networks functions and pictures from the Photobox. You can decide to show them to the Leaderboard or not. It's a administration panel to remove pictures not wanted on the Leaderboard.
 
 ### UserApp
 
 ![UserApp](https://hitw2019blob.blob.core.windows.net/hitw2019/userApp.PNG)
+
 The UserApp is an app to help people inside your event. They want to know the schedule? It's in the app. They want to know the schedule for speakers? It's inside the app. They want to add new pictures to see them on the Leaderboard? They can! It's the app which is the most developed on this solution and it's a progressive webApp! Like that, people can use it like a simple website or like an app on their phones!
 
 ### Built With
