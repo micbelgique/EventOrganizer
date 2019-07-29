@@ -43,7 +43,6 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
-* [Usage](#usage)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
@@ -65,6 +64,8 @@ These two functions will be use to retrieve the tweets and Instagram post with a
 The Photobox is an app where you can take a picture of you and it will be added inside the solution like the 2 functions for social networks. It helps if you don't have a twitter or Instagram account or if you want to take a picture with more picture.
 
 ### Leaderboard
+![Leaderboard](https://lh3.googleusercontent.com/oIDSjlzetZoCh6ZRMNSU7062_Ns5ddS_zk7cuhJ9vHSOJ1u6UTvm7WDhV64ltbiHxAst46NAVnPau7yKSj1BmVHM2TBMarRTbJxwvywcAVjvyjiKx7HKYc4UWY3lMW6t7YFiCDro1IXesxQz_5-qXcGgUFl7VJkLIUYY2vKbFyI0rQdwjMG4RJbz3dMBkf7F7uXW2xc0i1OiEJdMZpU4bpRfokuTmZv_gGRmPKhLF7lrOhyaqSkiEZMs0G2VMpiYL92M-3ad6K7GeKwYOS12ycJeErR6GhuF72VnlGVbD446xaWMHRE4mjL-NI-RiDyG1rqY41g1Mo6pcPhd-xYBJDrfs_X-BuKX8l_8nsDr7f7_6-q6JWf9yawYKgetc-rVCP4sfMz1zewQAaizg_VmqCPivnCNPsA0CuvbEXdCo0eQw8vEkWyzYzJFQTjHCSr8Cjxk_WnwQL4mb5ki_wVhKWDDCADyyVu--bf5d9SvzgALUo0MNiuG8GfzWB6ZIEN0NldY1vaxIQ1tFeHxKqgi65GR5qSplJiHouDLlLDW9H8T0wdAenDR_g8jjCBj32grIybWUwLc0Wm7HL2Cts8ExmMBXlUdRbNGdXxabk0arOh0TbVQ1foHk593-yrZOBURRpAMiG6TTPLUfk9q1llXS9oCF1sX-k5e=w1668-h937-no)
+The Leaderboard is an app to show all the pictures and posts added inside the solution by the Photobox, the 2 functions and the UserApp. It's first function is to show it on a big screen to show the vibe of your event!
 
 ### Dashboard
 
@@ -82,11 +83,6 @@ The UserApp is an app to help people inside your event. They want to know the sc
 * [Angular Material](https://material.angular.io/)
 * [.NET Core](https://dotnet.microsoft.com/download)
 * [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-2.2)
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -112,7 +108,6 @@ Contributions are what make the open source community such an amazing place to b
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
 
 
 <!-- CONTACT -->
