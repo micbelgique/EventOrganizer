@@ -33,7 +33,8 @@ export class ProfileComponent implements OnInit {
     this.httpClient.get('https://hitw2019api.azurewebsites.net/api/User/GetAll', {headers: this.httpHeader}).subscribe(
       (res: any[]) => {
         const token = this.userLocal.token;
-        this.userLocal = res.find(x => x.username = this.userLocal.username);
+        const username = this.userLocal.username;
+        this.userLocal = res.find(x => x.username === this.userLocal.username);
         this.userLocal.token = token;
         localStorage.setItem('user', JSON.stringify(this.userLocal));
         this.connected = true;
@@ -54,7 +55,6 @@ export class ProfileComponent implements OnInit {
           this.notifier.notify('error', 'Username or password incorrect');
         } else {
           this.userLocal = res;
-          console.log(res);
           localStorage.setItem('user', JSON.stringify(this.userLocal));
           this.connected = true;
           this.notifier.notify('success', 'succefully logged in');
