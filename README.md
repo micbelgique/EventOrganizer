@@ -11,7 +11,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 
 
 
@@ -132,5 +131,3 @@ Project Link: [https://github.com/micbelgique/EventOrganizer](https://github.com
 [stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
 [issues-shield]: https://img.shields.io/github/issues/micbelgique/EventOrganizer
 [issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/micbelgique/EventOrganizer
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
