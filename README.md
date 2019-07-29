@@ -20,13 +20,13 @@
 <br />
 <p align="center">
   <a href="https://github.com/micbelgique/EventOrganizer">
-    <img src="https://hitw2019.azurewebsites.net/assets/LogoFinalGreen.png" alt="Logo" width="80" height="80">
+    <img src="https://hitw2019.azurewebsites.net/assets/LogoFinalGreen.png" alt="Logo" width="192" height="192">
   </a>
 
   <h3 align="center">EventOrganizer - App In The Woods</h3>
 
   <p align="center">
-    EventOrganizer is a solution with multiple applications wich can help you to make your event more and more connected. App In The Woods is the implementation of this solution for the second edition of <a href="http://www.hackinthewoods.be/">Hack In The Woods</a>.
+    EventOrganizer is a solution with multiple applications which can help you to make your event more and more connected. App In The Woods is the implementation of this solution for the second edition of <a href="http://www.hackinthewoods.be/">Hack In The Woods</a>.
     <br />
     <br />
     <a href="https://hitw2019.azurewebsites.net/">View Demo</a>
@@ -55,13 +55,18 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+### Twitter and Instagram Functions
+These two functions will be use to retrieve the tweets and Instagram post with a determinate hashtag. Here, for the App In The Woods, it will check for the #hitw2019. They retrieve the data and the url of these posts and they add them inside the solution with the API.
+### Photobox
+[![Photobox][product-screenshot]](https://lh3.googleusercontent.com/EN_DE1_HNQjHokw1F8-LTO6cksel9yjfxrlL948e3bR3HcddTArYyPdYm8hdNXwsQ16IDW3_paUX5-q1Ox70W751fG-EGVweSiV1Sq8KTEujzHvvRatXfnFXODf2SSgn2KLfNokbC1m0WScumDVtAgY-zEIVgbvPjgLMpo_sz9w0cLTa7oTQeYaKSXuvTu8g48SI4_HxvaDGQXS1IGxnQKgmLyE6s1xJReWxfXtVUFIYewY6UXuQhV9hjrfMhfP0WlTpS3bjpsDuaJNWQhRM9JHvqa6fdW_zS_gaVjFSa52FLBbp7H0jRK6ofrtXmi9frhsc5CBnv5lmPsv15jkIsKjcPA2xZgopvvp6591dC4CpLf6Dpwv5uqOS2Wwo4V-Bgp5n6h7tU5jaywutqQila4ha3zVgcPcPCrnUe-VlaA72qPqTDKGC_--ZPkApH2x7wEsHHDxYZRDL0Gaxi6nOBc6bqksi-A02UhTeFQTizuaR5guQINiTWbGLVj01xmqOr8nwVRMgHHuroedqjqHC0UeQitJTBDMsRTb4f6sFeTw1Ak8JP_Tuv51MEnk5M9F2Q1k2cjRbApAePB8MY0sEqE2imTJV5KXhtRmpEhOt9H4rw6bbmPy9jmPzjNb0EQwP2j6ZB-AElbX5Fp7SYDXn0RL1JC8T_9S3=w1396-h937-no)
+The Photobox is an app where you can take a picture of you and it will be added inside the solution like the 2 functions for social networks. It helps if you don't have a twitter or Instagram account or if you want to take a picture with more picture.
+### Leaderboard
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+### Dashboard
+[![Dashboard][product-screenshot]](https://lh3.googleusercontent.com/qR9KKuF36UYsXiskoGgaXW6oVQhAKsxtp2RyguD7z9mfjW31kkO867MThJlWKozAg1TcVui2knHH1gmSaWjyXU6k9W2C7hQJzjU_4dknNziVplzPFv61R0Y4lxmEQ_6_B2znHCDtl9ES-swkTVDQ1W-OqNItUsrB06V0Hsvn2VJc3OEm6D-7XsKcdtv8tGEARqtYKxPZfJ61sN-JlPQC-2zBUFWAoOu7QD3b03zrKG54SRg_c1qBsvogMOIv03BbV-XR8UHtPi14aRVrS32J_y_36QPPzZ2XYbx4FO7cKOXE6VkpastjrqpSMJcEK8hOm71KsKg8-9lR_GbUVCjKwVKszlHRcz1tLubTIrJnqN96QKeDDw7kL7IPoqfckjUzNE-soMgZ61XuvzOB2PJl5_y4IN1nTacIpZB29PbKV3JNY7jAtvnPzAc6kgrBlk39EwJr3TD8XC3Psb0kG_r996xNPRZPT9QTVy1kaE0626ug95pWT---AutaKQ7HppG6mhOL38aRyn6EVTzt57sk1X3SBE5HjL_fwn5IfUWeYby71mQ8x_CQs0Oi6afjq29rZF2j0g_SM85qGeGvzftv077eYb6xjpuwWs_Rzd0F6jrirwp7dcYrDPqvPxbpsdZLmkc9fJ2fBit8KyikAJv0BBWnfTuqv7Qp=w1901-h930-no)
+The Dashboard is a place where you will find all posts from the 2 social networks functions and pictures from the Photobox. You can decide to show them to the Leaderboard or not. It's a administration panel to remove pictures not wanted on the Leaderboard.
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo`, `twitter_handle`, `email`
-
+### UserApp
 
 ### Built With
 
@@ -74,10 +79,6 @@ Here's a blank template to get started:
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
