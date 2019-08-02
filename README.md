@@ -18,7 +18,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/micbelgique/EventOrganizer">
-    <img src="https://hitw2019.azurewebsites.net/assets/LogoFinalGreen.png" alt="Logo" width="192" height="192">
+    <img src="https://hitw2019.azurewebsites.net/assets/LogoFinalGreen.png" alt="Logo" width="775" height="142">
   </a>
 
   <h3 align="center">EventOrganizer - App In The Woods</h3>
