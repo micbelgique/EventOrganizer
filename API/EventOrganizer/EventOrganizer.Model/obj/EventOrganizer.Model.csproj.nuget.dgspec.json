@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj": {}
+    "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj": {}
   },
   "projects": {
-    "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj": {
+    "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj",
+        "projectUniqueName": "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj",
         "projectName": "EventOrganizer.Model",
-        "projectPath": "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj",
-        "packagesPath": "C:\\Users\\NathanPire\\.nuget\\packages\\",
-        "outputPath": "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\obj\\",
+        "projectPath": "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj",
+        "packagesPath": "C:\\Users\\Nathan Pire\\.nuget\\packages\\",
+        "outputPath": "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\ProgramData\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\NathanPire\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nathan Pire\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

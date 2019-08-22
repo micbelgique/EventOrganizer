@@ -1119,7 +1119,7 @@
       ]
     },
     "Microsoft.Extensions.Primitives/2.2.0": {
-      "sha512": "vpH+o7f8obVx65PiEtBXxTwL5RosK60fNIMy/y8WGE4/r4IvAqQGukOzMhxsp//Accvd7kmukyQTVkqVYdaDyA==",
+      "sha512": "Sv8EDHvN2852bE5G1yosKCa7sUw/x0Z/rCaI5LIWHseAXprG1h9oberAh3NRBO7w2zTZq79WPeQDMsPBVSf99w==",
       "type": "package",
       "path": "microsoft.extensions.primitives/2.2.0",
       "files": [
@@ -1397,7 +1397,7 @@
       ]
     },
     "Microsoft.NETCore.DotNetAppHost/2.2.0": {
-      "sha512": "OK/H8p9Ig6mLMITjXJ4VOewrJg/TU+dAPHE4BdMWMv+8COzBehf7XF1+DofKkmqdHpO2cJoS5Sc9PEZ6PKCbsg==",
+      "sha512": "qIrVLupwT2NYTrf7KM7Nh+mJr36V5MITVRjyGOByVVCwGmQgQmI/6bjZYQv+QdExi4Cm87eCKJX9FdT6nc00Xg==",
       "type": "package",
       "path": "microsoft.netcore.dotnetapphost/2.2.0",
       "files": [
@@ -1901,7 +1901,7 @@
       ]
     },
     "System.Data.SqlClient/4.6.0": {
-      "sha512": "DLhg881ETdy/OmlbBCjfXGVU2Xlm9x5yHwhcl33SAfCIG05hAbgMcvHUZruIG1sBJolGzDhes7R7hAKPS1SOqw==",
+      "sha512": "cppLAiY36su7Hr9dOaeDXRkndLKtnh7HgQgOfAgV0oN764BQXShll7yBZ8OwPtdYUSuwTT0re7eDQPGhwnojVQ==",
       "type": "package",
       "path": "system.data.sqlclient/4.6.0",
       "files": [
@@ -3483,25 +3483,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\NathanPire\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\Nathan Pire\\.nuget\\packages\\": {},
+    "C:\\ProgramData\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Repository\\EventOrganizer.Repository.csproj",
+      "projectUniqueName": "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Repository\\EventOrganizer.Repository.csproj",
       "projectName": "EventOrganizer.Repository",
-      "projectPath": "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Repository\\EventOrganizer.Repository.csproj",
-      "packagesPath": "C:\\Users\\NathanPire\\.nuget\\packages\\",
-      "outputPath": "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Repository\\obj\\",
+      "projectPath": "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Repository\\EventOrganizer.Repository.csproj",
+      "packagesPath": "C:\\Users\\Nathan Pire\\.nuget\\packages\\",
+      "outputPath": "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\ProgramData\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\NathanPire\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nathan Pire\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -3515,8 +3515,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj": {
-              "projectPath": "C:\\GitKraken\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj"
+            "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj": {
+              "projectPath": "C:\\EventOrganizer\\API\\EventOrganizer\\EventOrganizer.Model\\EventOrganizer.Model.csproj"
             }
           }
         }
